@@ -151,83 +151,46 @@ export default function Home() {
           <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
-                <Sparkles size={16} className="text-gold" />
-                <span className="text-white/80 text-sm font-medium">
-                  #1 Trusted Publishing Partner
-                </span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
-                Full-Service Book Publishing to Help Your Book Reach Its{" "}
-                <span className="text-gradient">Full Potential</span>
-              </h1>
-
-              <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-xl animate-fade-in-up animate-delay-200">
-                Our seasoned staff takes care of everything involved in
-                publishing — from editing manuscripts to designing covers and
-                distributing your book to readers worldwide.
-              </p>
-
-              <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animate-delay-300">
-                <Link
-                  href="/contact"
-                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
-                >
-                  Get A Free Quote
-                  <ArrowRight size={20} />
-                </Link>
-                <a
-                  href="tel:+15551234567"
-                  className="flex items-center gap-3 text-white hover:text-gold transition-colors py-4 px-2"
-                >
-                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center animate-pulse-glow">
-                    <Phone size={20} className="text-gold" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-white/60">Call Us Now</div>
-                    <div className="font-semibold">+1 (555) 123-4567</div>
-                  </div>
-                </a>
-              </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+              <Sparkles size={16} className="text-gold" />
+              <span className="text-white/80 text-sm font-medium">
+                #1 Trusted Publishing Partner
+              </span>
             </div>
 
-            <div className="hidden lg:block relative">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
-                <div className="absolute inset-8 rounded-3xl gradient-gold opacity-20 blur-2xl" />
-                <Image
-                  src="/images/services/publishing.webp"
-                  alt="Book Publishing Services"
-                  width={500}
-                  height={500}
-                  className="relative rounded-3xl object-cover w-full h-full animate-float"
-                />
-                <div className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 animate-fade-in-up animate-delay-400">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                      <BookOpen size={18} className="text-gold" />
-                    </div>
-                    <div>
-                      <div className="text-white font-bold text-lg">500+</div>
-                      <div className="text-white/60 text-xs">Books Published</div>
-                    </div>
-                  </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
+              Full-Service Book Publishing to Help Your Book Reach Its{" "}
+              <span className="text-gradient">Full Potential</span>
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl animate-fade-in-up animate-delay-200">
+              Our seasoned staff takes care of everything involved in
+              publishing — from editing manuscripts to designing covers and
+              distributing your book to readers worldwide.
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animate-delay-300">
+              <Link
+                href="/contact"
+                className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
+              >
+                Get A Free Quote
+                <ArrowRight size={20} />
+              </Link>
+              <a
+                href="tel:+15551234567"
+                className="flex items-center gap-3 text-white hover:text-gold transition-colors py-4 px-2"
+              >
+                <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center animate-pulse-glow">
+                  <Phone size={20} className="text-gold" />
                 </div>
-                <div className="absolute -top-4 -right-4 glass rounded-2xl p-4 animate-fade-in-up animate-delay-500">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
-                      <Star size={18} className="text-gold" />
-                    </div>
-                    <div>
-                      <div className="text-white font-bold text-lg">5.0</div>
-                      <div className="text-white/60 text-xs">Client Rating</div>
-                    </div>
-                  </div>
+                <div>
+                  <div className="text-sm text-white/60">Call Us Now</div>
+                  <div className="font-semibold">+1 (555) 123-4567</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
