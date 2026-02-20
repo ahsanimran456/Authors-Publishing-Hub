@@ -1,26 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, BookOpen } from "lucide-react";
+import { books } from "@/data/books";
 
 export const metadata: Metadata = {
   title: "Portfolio — Authors Publishing Hub",
   description:
     "Browse our portfolio of published books. See the quality of work we deliver for authors worldwide.",
 };
-
-const books = [
-  { src: "/images/books/book1.png", title: "The Art of Living", genre: "Self-Help" },
-  { src: "/images/books/book2.png", title: "Midnight Shadows", genre: "Thriller" },
-  { src: "/images/books/book3.png", title: "Beyond the Horizon", genre: "Adventure" },
-  { src: "/images/books/book4.png", title: "Silent Echoes", genre: "Literary Fiction" },
-  { src: "/images/books/book5.png", title: "Rising Stars", genre: "Biography" },
-  { src: "/images/books/book1.png", title: "Journey Within", genre: "Memoir" },
-  { src: "/images/books/book2.png", title: "The Last Chapter", genre: "Mystery" },
-  { src: "/images/books/book3.png", title: "Infinite Dreams", genre: "Science Fiction" },
-  { src: "/images/books/book4.png", title: "Heart of Gold", genre: "Romance" },
-  { src: "/images/books/book5.png", title: "Wild Frontier", genre: "Historical Fiction" },
-];
 
 export default function PortfolioPage() {
   return (
@@ -38,9 +26,18 @@ export default function PortfolioPage() {
               Our <span className="text-gradient">Portfolio</span>
             </h1>
             <p className="mt-6 text-lg text-white/75 leading-relaxed">
-              A showcase of the incredible books we&apos;ve helped bring to life.
-              Each one crafted with care, professionalism, and dedication.
+              A showcase of {books.length}+ incredible books we&apos;ve helped
+              bring to life. Each one crafted with care, professionalism, and
+              dedication.
             </p>
+            <div className="mt-6 flex items-center justify-center gap-3">
+              <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
+                <BookOpen size={20} className="text-gold" />
+              </div>
+              <span className="text-white/80 text-lg font-medium">
+                {books.length}+ Published Books on Amazon
+              </span>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
@@ -49,25 +46,33 @@ export default function PortfolioPage() {
       {/* Portfolio Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-5">
             {books.map((book, i) => (
-              <div
+              <a
                 key={i}
-                className="portfolio-item group rounded-2xl overflow-hidden bg-cream"
+                href={book.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="portfolio-item group rounded-xl overflow-hidden bg-cream block"
               >
                 <div className="aspect-[3/4] relative">
                   <Image
-                    src={book.src}
+                    src={book.image}
                     alt={book.title}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, (max-width: 1280px) 20vw, 16vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
-                    <p className="text-white font-bold text-sm">{book.title}</p>
-                    <p className="text-gold text-xs font-medium">{book.genre}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
+                    <p className="text-white font-bold text-xs leading-tight line-clamp-2">
+                      {book.title}
+                    </p>
+                    <p className="text-gold text-[11px] font-medium mt-1 line-clamp-1">
+                      {book.author}
+                    </p>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -86,8 +91,8 @@ export default function PortfolioPage() {
                 Want Your Book in Our Portfolio?
               </h2>
               <p className="mt-4 text-white/75 text-lg max-w-xl mx-auto">
-                Let us help you create a beautifully published book that you&apos;ll
-                be proud of.
+                Let us help you create a beautifully published book that
+                you&apos;ll be proud of. Join {books.length}+ published authors.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link

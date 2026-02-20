@@ -16,6 +16,7 @@ import {
   Sparkles,
   Quote,
 } from "lucide-react";
+import { books } from "@/data/books";
 
 const services = [
   {
@@ -116,6 +117,8 @@ const portfolio = [
   { src: "/images/books/book4.png", title: "Silent Echoes" },
   { src: "/images/books/book5.png", title: "Rising Stars" },
 ];
+
+const homeBooks = books.slice(0, 12);
 
 const trustImages = [
   "/images/trust1.webp",
