@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   BookOpen,
   Palette,
@@ -10,32 +11,40 @@ import {
   Award,
   Globe,
   CheckCircle,
+  Phone,
+  FileText,
+  Sparkles,
+  Quote,
 } from "lucide-react";
 
 const services = [
   {
     icon: PenTool,
-    title: "Professional Editing",
+    title: "Book Writing",
     description:
-      "Our expert editors refine your manuscript to perfection, ensuring clarity, flow, and impact.",
+      "Our experienced ghostwriters bring your ideas to life, crafting compelling narratives that captivate readers.",
+    image: "/images/services/book-writing.webp",
   },
   {
-    icon: Palette,
-    title: "Cover Design",
+    icon: FileText,
+    title: "Book Editing",
     description:
-      "Eye-catching cover designs that capture your book's essence and attract readers at first glance.",
+      "Expert editors refine your manuscript with developmental editing, copyediting, and proofreading.",
+    image: "/images/services/book-editing.webp",
   },
   {
     icon: BookOpen,
-    title: "Self-Publishing",
+    title: "Book Publishing",
     description:
-      "End-to-end publishing support from formatting to distribution across all major platforms.",
+      "End-to-end publishing from ISBN registration and formatting to global distribution across all platforms.",
+    image: "/images/services/publishing.webp",
   },
   {
     icon: Megaphone,
     title: "Book Marketing",
     description:
-      "Strategic marketing campaigns to build your author brand and boost book sales globally.",
+      "Strategic campaigns to build your author brand and drive book sales with proven marketing tactics.",
+    image: "/images/services/book-marketing.webp",
   },
 ];
 
@@ -51,141 +60,270 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "Fiction Author",
     quote:
-      "Authors Publishing Hub transformed my manuscript into a bestseller. Their editing team is phenomenal!",
+      "Authors Publishing Hub transformed my manuscript into a bestseller. Their editing team is phenomenal and the cover design exceeded all my expectations!",
     rating: 5,
+    image: "/images/testimonial1.png",
   },
   {
     name: "James Rodriguez",
     role: "Non-Fiction Writer",
     quote:
-      "From cover design to marketing, every step was handled professionally. I couldn't have asked for a better partner.",
+      "From cover design to marketing, every step was handled with incredible professionalism. I couldn't have asked for a better publishing partner.",
     rating: 5,
+    image: "/images/testimonial2.png",
   },
   {
     name: "Emily Chen",
     role: "Children's Book Author",
     quote:
-      "The team understood my vision perfectly. My book looks absolutely stunning and the sales have been incredible.",
+      "The team understood my vision perfectly. My book looks absolutely stunning and the sales have been incredible since launch day.",
     rating: 5,
+    image: "/images/testimonial3.png",
   },
 ];
 
 const process = [
   {
     step: "01",
-    title: "Submit Your Manuscript",
-    description: "Share your work with us and we'll provide a free evaluation and consultation.",
+    title: "Draft Submission",
+    description:
+      "Submit your manuscript along with your requirements for editing, design, and publishing.",
   },
   {
     step: "02",
-    title: "Professional Editing",
-    description: "Our editors polish your manuscript while preserving your unique voice.",
+    title: "Editing & Proofreading",
+    description:
+      "An experienced editor reviews, edits, and proofreads your manuscript meticulously.",
   },
   {
     step: "03",
-    title: "Design & Format",
-    description: "We create a stunning cover and professionally format your book interior.",
+    title: "Design & Formatting",
+    description:
+      "Professional typesetting, cover design, illustrations, and interior layout for your book.",
   },
   {
     step: "04",
     title: "Publish & Market",
-    description: "Your book goes live on major platforms with a tailored marketing strategy.",
+    description:
+      "Your book goes live on all major platforms with a tailored marketing strategy to reach readers.",
   },
+];
+
+const portfolio = [
+  { src: "/images/books/book1.png", title: "The Art of Living" },
+  { src: "/images/books/book2.png", title: "Midnight Shadows" },
+  { src: "/images/books/book3.png", title: "Beyond the Horizon" },
+  { src: "/images/books/book4.png", title: "Silent Echoes" },
+  { src: "/images/books/book5.png", title: "Rising Stars" },
+];
+
+const trustImages = [
+  "/images/trust1.webp",
+  "/images/trust2.webp",
+  "/images/trust3.webp",
+  "/images/trust4.webp",
+  "/images/trust5.webp",
+  "/images/trust6.webp",
+  "/images/trust7.webp",
 ];
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="gradient-hero relative overflow-hidden">
+      {/* ===== HERO SECTION ===== */}
+      <section className="gradient-hero relative overflow-hidden min-h-[90vh] flex items-center">
+        <div className="absolute inset-0 line-pattern" />
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gold rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-80 h-80 bg-gold rounded-full blur-[100px]" />
+          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-magenta rounded-full blur-[100px]" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up">
-              Bring Your Story to{" "}
-              <span className="text-gradient">Life</span>
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed animate-fade-in-up animate-delay-200">
-              From manuscript to masterpiece — we provide professional editing,
-              stunning design, and powerful marketing to help authors publish
-              with confidence.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animate-delay-400">
-              <Link
-                href="/contact"
-                className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
-              >
-                Start Publishing
-                <ArrowRight size={20} />
-              </Link>
-              <Link
-                href="/services"
-                className="border-2 border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded-full text-lg transition-colors duration-200"
-              >
-                Our Services
-              </Link>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+                <Sparkles size={16} className="text-gold" />
+                <span className="text-white/80 text-sm font-medium">
+                  #1 Trusted Publishing Partner
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
+                Full-Service Book Publishing to Help Your Book Reach Its{" "}
+                <span className="text-gradient">Full Potential</span>
+              </h1>
+
+              <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-xl animate-fade-in-up animate-delay-200">
+                Our seasoned staff takes care of everything involved in
+                publishing — from editing manuscripts to designing covers and
+                distributing your book to readers worldwide.
+              </p>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animate-delay-300">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  Get A Free Quote
+                  <ArrowRight size={20} />
+                </Link>
+                <a
+                  href="tel:+15551234567"
+                  className="flex items-center gap-3 text-white hover:text-gold transition-colors py-4 px-2"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center animate-pulse-glow">
+                    <Phone size={20} className="text-gold" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/60">Call Us Now</div>
+                    <div className="font-semibold">+1 (555) 123-4567</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden lg:block relative">
+              <div className="relative w-full aspect-square max-w-lg mx-auto">
+                <div className="absolute inset-8 rounded-3xl gradient-gold opacity-20 blur-2xl" />
+                <Image
+                  src="/images/services/publishing.webp"
+                  alt="Book Publishing Services"
+                  width={500}
+                  height={500}
+                  className="relative rounded-3xl object-cover w-full h-full animate-float"
+                />
+                <div className="absolute -bottom-4 -left-4 glass rounded-2xl p-4 animate-fade-in-up animate-delay-400">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                      <BookOpen size={18} className="text-gold" />
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-lg">500+</div>
+                      <div className="text-white/60 text-xs">Books Published</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -top-4 -right-4 glass rounded-2xl p-4 animate-fade-in-up animate-delay-500">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center">
+                      <Star size={18} className="text-gold" />
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-lg">5.0</div>
+                      <div className="text-white/60 text-xs">Client Rating</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* Stats Section */}
+      {/* ===== TRUST BADGES MARQUEE ===== */}
+      <section className="py-8 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-gray-400 font-medium uppercase tracking-widest mb-6">
+            Trusted by Clients Nationwide
+          </p>
+          <div className="marquee-container">
+            <div className="marquee-track">
+              {[...trustImages, ...trustImages].map((src, i) => (
+                <div key={i} className="mx-8 shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+                  <Image src={src} alt="Trust badge" width={120} height={50} className="h-10 w-auto object-contain" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== STATS ===== */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-purple/10 flex items-center justify-center mx-auto mb-3">
-                  <stat.icon size={24} className="text-purple" />
+              <div
+                key={stat.label}
+                className="stat-card text-center bg-cream rounded-2xl p-6"
+              >
+                <div className="w-14 h-14 rounded-2xl gradient-purple-navy flex items-center justify-center mx-auto mb-4">
+                  <stat.icon size={24} className="text-white" />
                 </div>
                 <div className="text-3xl sm:text-4xl font-bold text-navy">
                   {stat.value}
                 </div>
-                <div className="text-gray-600 mt-1">{stat.label}</div>
+                <div className="text-gray-500 mt-1 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-cream">
+      {/* ===== SERVICES ===== */}
+      <section className="py-20 bg-cream dot-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              Our <span className="text-purple">Services</span>
+            <div className="section-divider mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+              Reach Your Literary Goals With{" "}
+              <span className="text-gradient-purple">Reliable Services</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-              Everything you need to transform your manuscript into a
-              professionally published book.
+              Professionalism, careful attention to detail, and a stress-free
+              experience at every step of your publishing journey.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-white rounded-2xl p-8 shadow-sm card-hover"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm card-hover card-glow group"
               >
-                <div className="w-14 h-14 rounded-xl gradient-purple-navy flex items-center justify-center mb-5">
-                  <service.icon size={24} className="text-white" />
+                <div className="flex flex-col sm:flex-row">
+                  <div className="sm:w-48 h-48 sm:h-auto relative shrink-0 overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 gradient-purple-navy opacity-30" />
+                  </div>
+                  <div className="p-7 flex-1">
+                    <div className="w-12 h-12 rounded-xl gradient-purple-navy flex items-center justify-center mb-4">
+                      <service.icon size={22} className="text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-navy mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center gap-1.5 mt-4 text-purple font-semibold hover:text-navy transition-colors group/link"
+                    >
+                      Learn More
+                      <ArrowRight
+                        size={16}
+                        className="group-hover/link:translate-x-1 transition-transform"
+                      />
+                    </Link>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
               </div>
             ))}
           </div>
+
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 text-purple font-semibold hover:text-navy transition-colors"
+              className="inline-flex items-center gap-2 bg-navy hover:bg-navy-light text-white font-semibold px-8 py-4 rounded-full transition-colors"
             >
               View All Services <ArrowRight size={18} />
             </Link>
@@ -193,147 +331,291 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* ===== CTA BANNER ===== */}
+      <section className="gradient-purple-navy relative overflow-hidden">
+        <div className="absolute inset-0 line-pattern" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                Seize the Moment! Watch Your Book Grow Into a{" "}
+                <span className="text-gradient">Masterpiece</span>
+              </h2>
+              <p className="mt-3 text-white/70 text-lg max-w-xl">
+                Hop on a call and learn how we can help you access the full
+                potential of your book.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+              <Link
+                href="/contact"
+                className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
+              >
+                Get Started <ArrowRight size={18} />
+              </Link>
+              <a
+                href="tel:+15551234567"
+                className="border-2 border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
+              >
+                <Phone size={18} /> Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== HOW IT WORKS / PROCESS ===== */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              How It <span className="text-gold-dark">Works</span>
+            <div className="section-divider mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+              Our <span className="text-gradient">Process</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-              Our streamlined process makes publishing your book simple and
-              stress-free.
+              A systematic, professional, and fast publishing process designed
+              to transform aspiring writers into published authors.
             </p>
           </div>
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((item) => (
-              <div key={item.step} className="relative text-center">
-                <div className="text-6xl font-bold text-navy/10 mb-2">
-                  {item.step}
+            {process.map((item, index) => (
+              <div key={item.step} className="relative group">
+                {index < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-0.5 bg-gradient-to-r from-purple/30 to-gold/30" />
+                )}
+                <div className="text-center">
+                  <div className="w-24 h-24 rounded-full gradient-purple-navy flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple/20">
+                    <span className="text-3xl font-bold text-gold">
+                      {item.step}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-navy mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-navy mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About Preview */}
+      {/* ===== PORTFOLIO ===== */}
       <section className="py-20 gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 line-pattern" />
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-64 h-64 bg-gold rounded-full blur-3xl" />
+          <div className="absolute top-10 right-20 w-64 h-64 bg-gold rounded-full blur-[100px]" />
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-magenta rounded-full blur-[100px]" />
         </div>
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              Why Choose{" "}
-              <span className="text-gradient">Authors Publishing Hub?</span>
+          <div className="text-center mb-16">
+            <div className="section-divider mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              Our <span className="text-gradient">Portfolio</span>
             </h2>
-            <p className="mt-6 text-white/80 text-lg leading-relaxed">
-              We believe every author deserves to see their book in print. Our
-              dedicated team of publishing professionals brings decades of
-              experience to help you navigate the publishing journey with ease.
+            <p className="mt-4 text-white/70 max-w-2xl mx-auto text-lg">
+              A glimpse at some of the incredible books we&apos;ve helped authors
+              publish.
             </p>
-            <div className="mt-10 grid sm:grid-cols-2 gap-6 text-left">
-              {[
-                "Personalized one-on-one support",
-                "Industry-leading editing standards",
-                "Distribution to 40,000+ retailers",
-                "100% royalties — you own your work",
-                "Award-winning cover designers",
-                "Proven marketing strategies",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 text-white/90"
-                >
-                  <CheckCircle size={20} className="text-gold shrink-0" />
-                  {item}
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {portfolio.map((book) => (
+              <div
+                key={book.title}
+                className="portfolio-item relative group rounded-2xl overflow-hidden w-44 sm:w-52"
+              >
+                <div className="aspect-[3/4] relative">
+                  <Image
+                    src={book.src}
+                    alt={book.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white font-semibold text-sm">
+                      {book.title}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
             <Link
-              href="/about"
-              className="inline-flex items-center gap-2 mt-10 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-4 rounded-full text-lg transition-colors duration-200"
+              href="/portfolio"
+              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full transition-colors"
             >
-              Learn More About Us <ArrowRight size={20} />
+              View Full Portfolio <ArrowRight size={18} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-cream">
+      {/* ===== WHY CHOOSE US ===== */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="section-divider mb-4" />
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+                The Most Seamless and Fastest{" "}
+                <span className="text-gradient-purple">Publishing Process</span>
+              </h2>
+              <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+                We house experienced writing professionals who have marked their
+                names in every field of book writing. No matter the genre or
+                format, we have mastered them all. With our team&apos;s excellence
+                and expertise, we&apos;ve successfully transformed hundreds of
+                aspiring writers into published authors.
+              </p>
+
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                {[
+                  "Professional Look & Feel",
+                  "Global Distribution",
+                  "100% Royalties — You Own Your Work",
+                  "Award-Winning Cover Design",
+                  "Distribution to 40,000+ Retailers",
+                  "Dedicated Project Manager",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 text-gray-700"
+                  >
+                    <CheckCircle size={20} className="text-gold shrink-0" />
+                    <span className="font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
+                >
+                  Get A Free Quote <ArrowRight size={18} />
+                </Link>
+                <a
+                  href="tel:+15551234567"
+                  className="border-2 border-navy hover:border-purple text-navy hover:text-purple font-semibold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
+                >
+                  <Phone size={18} /> +1 (555) 123-4567
+                </a>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-4 rounded-3xl bg-purple/10 blur-2xl" />
+              <Image
+                src="/images/about-hero.png"
+                alt="Publishing Excellence"
+                width={600}
+                height={500}
+                className="relative rounded-3xl shadow-2xl shadow-navy/10 w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TESTIMONIALS ===== */}
+      <section className="py-20 bg-cream dot-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              What Authors <span className="text-purple">Say</span>
+            <div className="section-divider mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
+              Our Clients{" "}
+              <span className="text-gradient-purple">Bear Witness</span>
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-              Don't just take our word for it — hear from the authors we've
-              helped succeed.
+              There is nothing more refreshing than the kind words of our
+              clients.
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.name}
-                className="bg-white rounded-2xl p-8 shadow-sm card-hover"
+                className="bg-white rounded-2xl p-8 shadow-sm card-hover card-glow relative"
               >
+                <Quote
+                  size={40}
+                  className="absolute top-6 right-6 text-purple/10"
+                />
+                <div className="flex items-center gap-4 mb-5">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 rounded-full object-cover border-2 border-gold"
+                  />
+                  <div>
+                    <div className="font-bold text-navy">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-purple font-medium">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </div>
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
-                      size={18}
+                      size={16}
                       className="text-gold fill-gold"
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed italic mb-6">
+                <p className="text-gray-700 leading-relaxed italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
-                <div>
-                  <div className="font-semibold text-navy">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-gray-500">
-                    {testimonial.role}
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* ===== FINAL CTA ===== */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="gradient-purple-navy rounded-3xl p-12 sm:p-16 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-gold rounded-full blur-3xl" />
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-magenta rounded-full blur-3xl" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="gradient-purple-navy rounded-3xl p-12 sm:p-16 relative overflow-hidden text-center">
+            <div className="absolute inset-0 line-pattern" />
+            <div className="absolute inset-0 opacity-15">
+              <div className="absolute -top-20 -right-20 w-80 h-80 bg-gold rounded-full blur-[100px]" />
+              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-magenta rounded-full blur-[100px]" />
             </div>
             <div className="relative">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                Ready to Publish Your Book?
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                Get A Free, Customized{" "}
+                <span className="text-gradient">Price Estimate</span> Today!
               </h2>
-              <p className="mt-4 text-white/80 text-lg max-w-xl mx-auto">
-                Take the first step toward becoming a published author. Contact
-                us today for a free consultation.
+              <p className="mt-4 text-white/75 text-lg max-w-xl mx-auto">
+                Talk to our experts to receive a quotation tailored to your
+                needs. Your publishing dream is just one conversation away.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 mt-8 bg-gold hover:bg-gold-light text-navy-dark font-semibold px-8 py-4 rounded-full text-lg transition-colors duration-200"
-              >
-                Get Your Free Consultation
-                <ArrowRight size={20} />
-              </Link>
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-10 py-4 rounded-full text-lg transition-colors flex items-center gap-2"
+                >
+                  Get Started <ArrowRight size={20} />
+                </Link>
+                <a
+                  href="tel:+15551234567"
+                  className="border-2 border-white/30 hover:border-gold text-white hover:text-gold font-semibold px-8 py-4 rounded-full transition-colors flex items-center gap-2 text-lg"
+                >
+                  <Phone size={20} /> +1 (555) 123-4567
+                </a>
+              </div>
             </div>
           </div>
         </div>
