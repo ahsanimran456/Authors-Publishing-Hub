@@ -132,12 +132,23 @@ export default function Home() {
   return (
     <>
       {/* ===== HERO SECTION ===== */}
-      <section className="gradient-hero relative overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 line-pattern" />
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background Image */}
+        <Image
+          src="/images/hero-books-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy/90 to-purple-dark/85" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-transparent to-navy/60" />
+        <div className="absolute inset-0 line-pattern opacity-40" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-80 h-80 bg-gold rounded-full blur-[100px]" />
           <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-magenta rounded-full blur-[100px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
