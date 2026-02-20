@@ -151,46 +151,59 @@ export default function Home() {
           <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-purple rounded-full blur-[120px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
-              <Sparkles size={16} className="text-gold" />
-              <span className="text-white/80 text-sm font-medium">
-                #1 Trusted Publishing Partner
-              </span>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+                <Sparkles size={16} className="text-gold" />
+                <span className="text-white/80 text-sm font-medium">
+                  #1 Trusted Publishing Partner
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
+                Full-Service Book Publishing to Help Your Book Reach Its{" "}
+                <span className="text-gradient">Full Potential</span>
+              </h1>
+
+              <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-xl animate-fade-in-up animate-delay-200">
+                Our seasoned staff takes care of everything involved in
+                publishing — from editing manuscripts to designing covers and
+                distributing your book to readers worldwide.
+              </p>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animate-delay-300">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
+                >
+                  Get A Free Quote
+                  <ArrowRight size={20} />
+                </Link>
+                <a
+                  href="tel:+15551234567"
+                  className="flex items-center gap-3 text-white hover:text-gold transition-colors py-4 px-2"
+                >
+                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center animate-pulse-glow">
+                    <Phone size={20} className="text-gold" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/60">Call Us Now</div>
+                    <div className="font-semibold">+1 (555) 123-4567</div>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
-              Full-Service Book Publishing to Help Your Book Reach Its{" "}
-              <span className="text-gradient">Full Potential</span>
-            </h1>
-
-            <p className="mt-6 text-lg sm:text-xl text-white/75 leading-relaxed max-w-2xl animate-fade-in-up animate-delay-200">
-              Our seasoned staff takes care of everything involved in
-              publishing — from editing manuscripts to designing covers and
-              distributing your book to readers worldwide.
-            </p>
-
-            <div className="mt-10 flex flex-col sm:flex-row items-start gap-4 animate-fade-in-up animate-delay-300">
-              <Link
-                href="/contact"
-                className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full text-lg transition-colors duration-200 flex items-center gap-2"
-              >
-                Get A Free Quote
-                <ArrowRight size={20} />
-              </Link>
-              <a
-                href="tel:+15551234567"
-                className="flex items-center gap-3 text-white hover:text-gold transition-colors py-4 px-2"
-              >
-                <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center animate-pulse-glow">
-                  <Phone size={20} className="text-gold" />
-                </div>
-                <div>
-                  <div className="text-sm text-white/60">Call Us Now</div>
-                  <div className="font-semibold">+1 (555) 123-4567</div>
-                </div>
-              </a>
+            <div className="hidden lg:flex items-center justify-center animate-fade-in-up animate-delay-400">
+              <Image
+                src="/images/book-wrap.png"
+                alt="Published Books"
+                width={550}
+                height={450}
+                className="drop-shadow-2xl animate-float"
+                priority
+              />
             </div>
           </div>
         </div>
