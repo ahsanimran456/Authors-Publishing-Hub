@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-navy: #1B1464;
+  --color-navy-light: #252080;
+  --color-navy-dark: #110E40;
+  --color-purple: #8B2272;
+  --color-purple-light: #A52D8A;
+  --color-purple-dark: #6B1D5E;
+  --color-magenta: #C23A8F;
+  --color-gold: #D4A843;
+  --color-gold-light: #E4C06A;
+  --color-gold-dark: #B8922E;
+  --color-cream: #FFF8EB;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #6B1D5E 0%, #8B2272 25%, #1B1464 70%, #110E40 100%);
+}
+
+.gradient-purple-navy {
+  background: linear-gradient(135deg, #8B2272 0%, #1B1464 100%);
+}
+
+.gradient-navy-purple {
+  background: linear-gradient(135deg, #1B1464 0%, #8B2272 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #D4A843 0%, #E4C06A 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #D4A843, #E4C06A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(27, 20, 100, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+  opacity: 0;
 }
