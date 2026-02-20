@@ -121,13 +121,11 @@ const portfolio = [
 const homeBooks = books.slice(0, 12);
 
 const trustImages = [
-  "/images/trust1.webp",
-  "/images/trust2.webp",
-  "/images/trust3.webp",
-  "/images/trust4.webp",
-  "/images/trust5.webp",
-  "/images/trust6.webp",
-  "/images/trust7.webp",
+  { src: "/images/clients/enroll-business.png", alt: "Enroll Business" },
+  { src: "/images/clients/brownbook.png", alt: "BrownBook.net" },
+  { src: "/images/clients/proven-expert.png", alt: "Proven Expert" },
+  { src: "/images/clients/bark.png", alt: "Bark" },
+  { src: "/images/clients/trustpilot.png", alt: "Trustpilot" },
 ];
 
 export default function Home() {
@@ -234,9 +232,9 @@ export default function Home() {
           </p>
           <div className="marquee-container">
             <div className="marquee-track">
-              {[...trustImages, ...trustImages].map((src, i) => (
-                <div key={i} className="mx-8 shrink-0 opacity-60 hover:opacity-100 transition-opacity">
-                  <Image src={src} alt="Trust badge" width={120} height={50} className="h-10 w-auto object-contain" />
+              {[...trustImages, ...trustImages, ...trustImages].map((badge, i) => (
+                <div key={i} className="mx-10 shrink-0 opacity-70 hover:opacity-100 transition-opacity">
+                  <Image src={badge.src} alt={badge.alt} width={160} height={60} className="h-12 w-auto object-contain" />
                 </div>
               ))}
             </div>
