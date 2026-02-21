@@ -154,14 +154,7 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
-                <Sparkles size={16} className="text-gold" />
-                <span className="text-white/80 text-sm font-medium">
-                  #1 Trusted Publishing Partner
-                </span>
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight animate-fade-in-up animate-delay-100">
                 Full-Service Book Publishing to Help Your Book Reach Its{" "}
                 <span className="text-gradient">Full Potential</span>
               </h1>
