@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -25,50 +26,53 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-navy-dark text-white/80 text-sm py-2 hidden md:block">
+      <div className="bg-navy-dark text-white/80 text-xs sm:text-sm py-2 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <p>Empowering Authors Worldwide — Professional Publishing Services</p>
-          <div className="flex items-center gap-4">
-            <a href="tel:+15551234567" className="flex items-center gap-1.5 hover:text-gold transition-colors">
-              <Phone size={14} />
-              +1 (555) 123-4567
+          <p className="truncate">Empowering Authors Worldwide — Professional Publishing Services</p>
+          <div className="flex items-center gap-3 lg:gap-4 shrink-0">
+            <a href="tel:+18503386681" className="flex items-center gap-1.5 hover:text-gold transition-colors">
+              <Phone size={13} />
+              <span className="hidden lg:inline">+1 (850) 338-6681</span>
+              <span className="lg:hidden">Call Us</span>
             </a>
             <span className="text-white/30">|</span>
-            <a href="mailto:info@authorspublishinghub.com" className="hover:text-gold transition-colors">
-              info@authorspublishinghub.com
+            <a href="mailto:Hello@authorspublishinghub.com" className="hover:text-gold transition-colors hidden lg:inline">
+              Hello@authorspublishinghub.com
+            </a>
+            <a href="mailto:Hello@authorspublishinghub.com" className="hover:text-gold transition-colors lg:hidden">
+              Email Us
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 transition-all duration-300 border-b ${
           scrolled
-            ? "bg-navy/98 backdrop-blur-md shadow-lg shadow-navy/20"
-            : "bg-navy/95 backdrop-blur-sm"
+            ? "bg-white shadow-lg shadow-black/5 border-gray-100"
+            : "bg-white border-gray-100"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <Link href="/" className="flex items-center gap-3 shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Authors Publishing Hub"
-                width={200}
-                height={55}
-                className="h-14 w-auto"
-                priority
-              />
+          <div className="flex items-center justify-between h-16 sm:h-18">
+            <Link href="/" className="flex items-center shrink-0">
+              <div className="relative h-12 sm:h-13 lg:h-14 w-[170px] sm:w-[195px] lg:w-[220px]">
+                <Image
+                  src="/logo.png"
+                  alt="Authors Publishing Hub"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-7">
+            <nav className="hidden xl:flex items-center gap-5 2xl:gap-7">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white/80 hover:text-gold font-medium transition-colors duration-200 relative group"
+                  className="text-navy/70 hover:text-navy font-medium text-base transition-colors duration-200 relative group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
@@ -76,58 +80,58 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden xl:flex items-center gap-3">
               <a
-                href="tel:+15551234567"
-                className="flex items-center gap-2 text-gold hover:text-gold-light font-medium transition-colors"
+                href="tel:+18503386681"
+                className="flex items-center gap-2 text-navy/70 hover:text-navy font-medium text-sm transition-colors"
               >
-                <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center animate-pulse-glow">
-                  <Phone size={16} className="text-gold" />
+                <div className="w-8 h-8 rounded-full bg-gold/15 flex items-center justify-center">
+                  <Phone size={14} className="text-gold-dark" />
                 </div>
-                +1 (555) 123-4567
+                <span className="hidden 2xl:inline">+1 (850) 338-6681</span>
               </a>
               <Link
                 href="/contact"
-                className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-7 py-3 rounded-full transition-colors duration-200"
+                className="btn-shimmer bg-navy hover:bg-navy-light text-white font-semibold px-5 py-2 rounded-full text-sm tracking-wide transition-all duration-200 shadow-lg hover:shadow-navy/20 hover:-translate-y-0.5"
               >
                 Get A Quote
               </Link>
             </div>
 
             <button
-              className="lg:hidden text-white p-2"
+              className="xl:hidden text-navy p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+              {mobileOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
 
         {mobileOpen && (
-          <div className="lg:hidden bg-navy-dark border-t border-white/10 animate-fade-in-down">
-            <nav className="flex flex-col px-4 py-4 gap-1">
+          <div className="xl:hidden bg-white border-t border-gray-100 max-h-[80vh] overflow-y-auto">
+            <nav className="flex flex-col px-4 py-3 gap-0.5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-white/80 hover:text-gold font-medium py-3 px-4 rounded-lg hover:bg-white/5 transition-colors"
+                  className="text-navy/70 hover:text-navy font-medium py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors text-base"
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="flex flex-col gap-3 mt-3 pt-3 border-t border-white/10">
+              <div className="flex flex-col gap-3 mt-3 pt-3 border-t border-gray-100">
                 <a
-                  href="tel:+15551234567"
-                  className="flex items-center justify-center gap-2 text-gold font-medium py-3"
+                  href="tel:+18503386681"
+                  className="flex items-center justify-center gap-2 text-navy font-medium py-3 text-sm"
                 >
                   <Phone size={16} />
-                  +1 (555) 123-4567
+                  +1 (850) 338-6681
                 </a>
                 <Link
                   href="/contact"
-                  className="bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-3 rounded-full text-center transition-colors"
+                  className="bg-navy hover:bg-navy-light text-white font-semibold px-5 py-2.5 rounded-full text-center text-sm tracking-wide transition-all duration-200 shadow-lg hover:shadow-navy/20"
                   onClick={() => setMobileOpen(false)}
                 >
                   Get A Quote

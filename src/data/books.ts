@@ -150,4 +150,12 @@ export const books: Book[] = [
   { image: "/images/books/accord.jpg", title: "SOVEREIGN ACCORD", author: "R.H LEGNER", link: "https://www.amazon.com/SOVEREIGN-ACCORD-Dominion-Chronicles-Book-ebook/dp/B0FHTGNBDN" },
   { image: "/images/books/wom.jpg", title: "WORD OF MOUTH", author: "JEFFREY BAILEY", link: "https://www.amazon.com/WORD-MOUTH-JEFFREY-BAILEY-ebook/dp/B0FKVGYNMD" },
   { image: "/images/books/otherside.jpg", title: "Hello From The Other Side", author: "Hope Daniel & Sharon Mancuso", link: "https://www.amazon.com/Hello-other-side-THROUGH-DARKNESS/dp/B0FVTYW119" },
+  { image: "/images/books/artspain.jpg", title: "Art of Spain", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/chineseart.jpg", title: "Chinese Art", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/elsp.jpg", title: "El Espíritu", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/frenchart.jpg", title: "French Art", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/h2.jpg", title: "H2", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/hindi.jpg", title: "Hindi", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/proto.jpg", title: "Proto", author: "Authors Publishing Hub", link: "#" },
+  { image: "/images/books/theresm.jpg", title: "There's More", author: "Authors Publishing Hub", link: "#" },
 ];

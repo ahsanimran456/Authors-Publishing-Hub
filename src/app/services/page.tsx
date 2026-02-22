@@ -2,373 +2,330 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
+  ArrowRight,
+  Phone,
   PenTool,
-  Palette,
+  FileText,
   BookOpen,
   Megaphone,
-  FileText,
-  BarChart3,
-  Headphones,
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-  Phone,
 } from "lucide-react";
+import CTABannerCards from "@/components/CTABannerCards";
+import FreeEstimateCTA from "@/components/FreeEstimateCTA";
 
 export const metadata: Metadata = {
   title: "Services — Authors Publishing Hub",
   description:
-    "Explore our comprehensive publishing services — from professional editing and cover design to self-publishing and book marketing.",
+    "Explore our comprehensive publishing services — from professional writing and editing to publishing and book marketing.",
 };
-
-const services = [
-  {
-    icon: PenTool,
-    title: "Book Writing",
-    description:
-      "Our experienced ghostwriters bring your ideas to life, crafting compelling narratives that captivate readers from the first page.",
-    features: [
-      "Fiction & non-fiction ghostwriting",
-      "Research & interviews",
-      "Chapter-by-chapter drafts",
-      "Unlimited revisions",
-    ],
-    image: "/images/services/book-writing.webp",
-  },
-  {
-    icon: FileText,
-    title: "Book Editing",
-    description:
-      "With flawless grammar, natural prose, and consistent storytelling, our expert editors will make your manuscript effective and polished.",
-    features: [
-      "Developmental editing",
-      "Line editing & copyediting",
-      "Proofreading",
-      "Manuscript evaluation",
-    ],
-    image: "/images/services/book-editing.webp",
-  },
-  {
-    icon: BookOpen,
-    title: "Book Publishing",
-    description:
-      "Our all-inclusive publishing services take care of everything — from editing and proofreading to cover art, ISBN ordering, and global distribution.",
-    features: [
-      "ISBN registration",
-      "eBook & print formatting",
-      "Global distribution",
-      "Platform setup & optimization",
-    ],
-    image: "/images/services/publishing.webp",
-  },
-  {
-    icon: Megaphone,
-    title: "Book Marketing",
-    description:
-      "Gain insight and applause from your distinguished audience as we implement the right marketing tactics for maximum impact.",
-    features: [
-      "Social media campaigns",
-      "Amazon optimization",
-      "Book launch strategy",
-      "Email marketing",
-    ],
-    image: "/images/services/book-marketing.webp",
-  },
-  {
-    icon: Palette,
-    title: "Cover Design",
-    description:
-      "Custom cover designs that capture your book's essence and attract readers at first glance across every platform.",
-    features: [
-      "Custom illustration",
-      "Typography design",
-      "Multiple concepts",
-      "Print & digital formats",
-    ],
-    image: "/images/services/cover-design.webp",
-  },
-  {
-    icon: BarChart3,
-    title: "Author Branding",
-    description:
-      "Build a compelling author brand that resonates with your target audience and strengthens your reputation as a writer.",
-    features: [
-      "Author website design",
-      "Logo & brand identity",
-      "Brand guidelines",
-      "Bio & headshot direction",
-    ],
-    image: "/images/services/stars.webp",
-  },
-  {
-    icon: Headphones,
-    title: "Audiobook Production",
-    description:
-      "Professional audiobook recording and production for the rapidly growing audio market.",
-    features: [
-      "Narrator selection",
-      "Studio recording",
-      "Post-production editing",
-      "Platform distribution",
-    ],
-    image: "/images/services/book-writing.webp",
-  },
-  {
-    icon: Sparkles,
-    title: "Interior Formatting",
-    description:
-      "Professional typesetting and layout that gives your book a polished, bookstore-ready look and feel.",
-    features: [
-      "Print-ready layouts",
-      "eBook formatting",
-      "Chapter design",
-      "Image placement",
-    ],
-    image: "/images/services/book-editing.webp",
-  },
-];
-
-const packages = [
-  {
-    name: "Starter",
-    price: "$1,499",
-    description: "Perfect for first-time authors",
-    features: [
-      "Manuscript evaluation",
-      "Basic copyediting",
-      "eBook formatting",
-      "1 cover design concept",
-      "Amazon KDP setup",
-      "Email support",
-    ],
-    highlighted: false,
-  },
-  {
-    name: "Professional",
-    price: "$3,499",
-    description: "Our most popular publishing package",
-    features: [
-      "Full developmental editing",
-      "Line editing & proofreading",
-      "eBook + print formatting",
-      "3 cover design concepts",
-      "Multi-platform distribution",
-      "Basic marketing plan",
-      "Dedicated project manager",
-      "Priority support",
-    ],
-    highlighted: true,
-  },
-  {
-    name: "Premium",
-    price: "$6,999",
-    description: "The complete publishing experience",
-    features: [
-      "Everything in Professional",
-      "Author branding package",
-      "Custom author website",
-      "Audiobook production",
-      "Full marketing campaign",
-      "Book launch strategy",
-      "12-month marketing support",
-      "VIP author support",
-    ],
-    highlighted: false,
-  },
-];
 
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 line-pattern" />
+      <section className="relative overflow-hidden min-h-[50vh] sm:min-h-[55vh] lg:min-h-[60vh] flex items-center">
+        <Image
+          src="/images/hero-books-bg.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/80 to-purple-dark/75" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-navy/40" />
+        <div className="absolute inset-0 line-pattern opacity-30" />
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gold rounded-full blur-[100px]" />
+          <div className="absolute top-20 right-10 sm:right-20 w-48 sm:w-72 h-48 sm:h-72 bg-gold rounded-full blur-[100px]" />
+          <div className="absolute bottom-10 left-5 sm:left-10 w-64 sm:w-96 h-64 sm:h-96 bg-purple rounded-full blur-[120px]" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           <div className="max-w-3xl mx-auto text-center">
             <div className="section-divider mx-auto mb-4" />
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
               Our <span className="text-gradient">Services</span>
             </h1>
-            <p className="mt-6 text-lg text-white/75 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-white/75 leading-relaxed max-w-2xl mx-auto">
               Comprehensive publishing solutions tailored to your unique needs.
               From first draft to bestseller — we&apos;ve got you covered.
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
-            {services.map((service, i) => (
-              <div
-                key={service.title}
-                className={`bg-cream rounded-2xl overflow-hidden card-hover card-glow ${
-                  i % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                <div className={`flex flex-col lg:flex-row ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                  <div className="lg:w-2/5 h-64 lg:h-auto relative shrink-0 overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 gradient-purple-navy opacity-30" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-2xl glass flex items-center justify-center">
-                        <service.icon size={36} className="text-gold" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:w-3/5 p-8 lg:p-10">
-                    <h3 className="text-2xl font-bold text-navy mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed mb-5">
-                      {service.description}
-                    </p>
-                    <ul className="grid sm:grid-cols-2 gap-3">
-                      {service.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-center gap-2 text-gray-700"
-                        >
-                          <CheckCircle size={16} className="text-gold-dark shrink-0" />
-                          <span className="font-medium">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-2 mt-6 text-purple font-bold hover:text-navy transition-colors group"
-                    >
-                      Get Started
-                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
+      {/* Book Writing Service */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-gold/10 text-gold-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-5">
+                <PenTool size={14} /> Book Writing
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="py-20 bg-cream dot-pattern">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="section-divider mx-auto mb-4" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy">
-              Publishing <span className="text-gradient-purple">Packages</span>
-            </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-              Choose the package that fits your publishing goals and budget.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`rounded-2xl p-8 card-hover ${
-                  pkg.highlighted
-                    ? "gradient-purple-navy text-white ring-4 ring-gold/50 lg:scale-105 relative"
-                    : "bg-white"
-                }`}
-              >
-                {pkg.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy-dark text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
-                    Most Popular
-                  </div>
-                )}
-                <h3
-                  className={`text-2xl font-bold ${
-                    pkg.highlighted ? "text-white" : "text-navy"
-                  }`}
-                >
-                  {pkg.name}
-                </h3>
-                <div
-                  className={`text-4xl font-bold mt-2 ${
-                    pkg.highlighted ? "text-gold" : "text-purple"
-                  }`}
-                >
-                  {pkg.price}
-                </div>
-                <p
-                  className={`mt-2 ${
-                    pkg.highlighted ? "text-white/70" : "text-gray-500"
-                  }`}
-                >
-                  {pkg.description}
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy leading-tight">
+                Ideal Book Writing Services
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-purple mt-2 sm:mt-3">
+                Where Affordability Meets Quality!
+              </h3>
+              <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+                One of the easiest and most direct ways to publish your book is
+                through Authors Publishing Hub&apos;s book authoring service. You
+                won&apos;t be inconvenienced in the slightest during the short and
+                easy planning process. Our team is competent to manage your needs
+                for professional book-writing services.
+              </p>
+              <div className="mt-5 sm:mt-6 bg-cream rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <h4 className="font-bold text-navy text-base sm:text-lg mb-2 sm:mb-3">
+                  Expert Book Writers in the USA That Improve Your Lead Generation
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                  Our book-writing company creates captivating content for clients
+                  that draws readers in, encourages conversions, and keeps them
+                  interested for the longest amount of time. Until they completely
+                  become customers, the audience is captivated by your brand. Employ
+                  qualified USA book writers to benefit from the wealth of experience
+                  gained over more than 10 years.
                 </p>
-                <ul className="mt-6 space-y-3">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <CheckCircle
-                        size={16}
-                        className={`shrink-0 ${
-                          pkg.highlighted ? "text-gold" : "text-gold-dark"
-                        }`}
-                      />
-                      <span
-                        className={
-                          pkg.highlighted ? "text-white/90" : "text-gray-700"
-                        }
-                      >
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+              </div>
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
                 <Link
                   href="/contact"
-                  className={`block text-center mt-8 py-3.5 px-6 rounded-full font-bold transition-all duration-200 ${
-                    pkg.highlighted
-                      ? "btn-shimmer bg-gold hover:bg-gold-light text-navy-dark"
-                      : "bg-navy hover:bg-navy-light text-white"
-                  }`}
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
                 >
-                  Get Started
+                  Get Started <ArrowRight size={15} />
                 </Link>
+                <a
+                  href="tel:+18503386681"
+                  className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  <Phone size={15} /> +1 (850) 338-6681
+                </a>
               </div>
-            ))}
+            </div>
+            <div className="relative mt-6 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-br from-gold/20 to-purple/20 rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/services/writing-service.jpg"
+                  alt="Book Writing Service"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent rounded-2xl" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-            Not Sure Which Package Is Right?
-          </h2>
-          <p className="mt-4 text-gray-600 text-lg max-w-xl mx-auto">
-            Contact us for a free consultation and we&apos;ll help you choose the
-            perfect plan for your publishing journey.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-bold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
-            >
-              Schedule a Free Consultation <ArrowRight size={18} />
-            </Link>
-            <a
-              href="tel:+15551234567"
-              className="border-2 border-navy hover:border-purple text-navy hover:text-purple font-semibold px-8 py-4 rounded-full transition-colors flex items-center gap-2"
-            >
-              <Phone size={18} /> +1 (555) 123-4567
-            </a>
+      {/* Book Editing Service */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-cream dot-pattern">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div className="order-2 lg:order-1 relative mt-6 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-br from-purple/20 to-gold/20 rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/services/editing-service.jpg"
+                  alt="Book Editing Service"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent rounded-2xl" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-purple/10 text-purple px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-5">
+                <FileText size={14} /> Book Editing
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy leading-tight">
+                Book Editing Service in the USA
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-purple mt-2 sm:mt-3">
+                Eliminating All Flaws From the Content
+              </h3>
+              <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+                A perfectionist editorial services firm, Authors Publishing Hub
+                boasts a large network of experienced book editors. Our reasonably
+                priced book editors correct grammar errors, fix defects, and provide
+                a flawless copy. Having been in business for more than a decade, our
+                expert book editing service takes satisfaction in consistently meeting
+                or surpassing the expectations of more than a thousand customers.
+              </p>
+              <div className="mt-5 sm:mt-6 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <h4 className="font-bold text-navy text-base sm:text-lg mb-2 sm:mb-3">
+                  Make Your Writing Better With Our Book Editing Service
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                  Our team of exceptional book editors, hand-selected to offer the
+                  best book editing services in the USA, is something we are quite
+                  proud of. With decades of experience in the field, we have
+                  successfully advanced numerous prestigious clients to the forefront
+                  of success with our literary magic. Here, with our reliable and
+                  reasonably priced book editors, is where your quest to becoming a
+                  best-selling author begins.
+                </p>
+              </div>
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  Get Started <ArrowRight size={15} />
+                </Link>
+                <a
+                  href="tel:+18503386681"
+                  className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  <Phone size={15} /> +1 (850) 338-6681
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Book Publishing Service */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-gold/10 text-gold-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-5">
+                <BookOpen size={14} /> Book Publishing
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy leading-tight">
+                Full-Service Book Publishing
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-purple mt-2 sm:mt-3">
+                Help Your Book Reach Its Full Potential
+              </h3>
+              <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+                Our seasoned staff takes care of everything involved in publishing,
+                from assessing and editing manuscripts to laying them out in a book
+                and designing its cover. Thanks to our in-depth expertise and
+                unwavering commitment to quality, we can get your book noticed by
+                the right people and into the hands of readers all over the world.
+              </p>
+              <div className="mt-5 sm:mt-6 bg-cream rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <h4 className="font-bold text-navy text-base sm:text-lg mb-2 sm:mb-3">
+                  Reach Your Literary Goals With Reliable Book Publishing Services
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                  Professionalism, careful attention to detail, and a stress-free
+                  encounter are all highly valued by us. Every step of the publishing
+                  process, from evaluating your manuscript through formatting, cover
+                  design, printing, and distribution, is taken care of by our devoted
+                  team. Through our extensive knowledge of the publishing industry,
+                  attentive service, and unwavering dedication to quality, we ensure
+                  that your book achieves the greatest potential success in the
+                  marketplace.
+                </p>
+              </div>
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  Get A Quote <ArrowRight size={15} />
+                </Link>
+                <a
+                  href="tel:+18503386681"
+                  className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  <Phone size={15} /> +1 (850) 338-6681
+                </a>
+              </div>
+            </div>
+            <div className="relative mt-6 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-br from-gold/20 to-purple/20 rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/services/publishing-service.jpg"
+                  alt="Book Publishing Service"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent rounded-2xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Book Marketing Service */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-cream dot-pattern">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+            <div className="order-2 lg:order-1 relative mt-6 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-br from-purple/20 to-gold/20 rounded-3xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/services/marketing-service.jpg"
+                  alt="Book Marketing Service"
+                  width={600}
+                  height={500}
+                  className="w-full h-auto object-cover rounded-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent rounded-2xl" />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 bg-purple/10 text-purple px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-5">
+                <Megaphone size={14} /> Book Marketing
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-navy leading-tight">
+                Comprehensive Book Marketing Strategies
+              </h2>
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-purple mt-2 sm:mt-3">
+                Help You Reach 1+ Million Readers
+              </h3>
+              <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
+                Effective book marketing is crucial in today&apos;s competitive
+                publishing environment so that your book may reach its intended
+                audience. We help you increase sales and build your author brand by
+                using our knowledge and skills in marketing to set you out from the
+                competition and connect with your ideal readers.
+              </p>
+              <div className="mt-5 sm:mt-6 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                <h4 className="font-bold text-navy text-base sm:text-lg mb-2 sm:mb-3">
+                  Promoting Your Book to Help You Make More Money
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                  Our expert marketing staff recognizes that every book is different,
+                  so they develop individualized plans based on your objectives and
+                  the demographics of your intended audience. We use a comprehensive
+                  strategy to increase awareness of your book and encourage real
+                  interest from readers. This includes creating an engaging web
+                  presence, organizing promotional campaigns, and gaining media
+                  attention. Our book marketing services are second to none, and you
+                  can rely on us to help your book reach its maximum potential.
+                </p>
+              </div>
+              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                <Link
+                  href="/contact"
+                  className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  Get Started <ArrowRight size={15} />
+                </Link>
+                <a
+                  href="tel:+18503386681"
+                  className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
+                >
+                  <Phone size={15} /> +1 (850) 338-6681
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTABannerCards />
+      <FreeEstimateCTA />
     </>
   );
 }
