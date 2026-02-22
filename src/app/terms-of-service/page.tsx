@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Authors Publishing Hub",
+  title: "Terms of Service",
   description:
     "Read the terms and conditions governing the use of Authors Publishing Hub's services and website.",
+  alternates: { canonical: "/terms-of-service" },
+  robots: { index: false, follow: true },
 };
 
 export default function TermsOfServicePage() {

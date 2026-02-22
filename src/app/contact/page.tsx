@@ -3,9 +3,22 @@ import Image from "next/image";
 import ContactFormSection from "@/components/ContactFormSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Authors Publishing Hub",
+  title: "Contact Us",
   description:
-    "Get in touch with Authors Publishing Hub. Start your publishing journey today.",
+    "Get in touch with Authors Publishing Hub. Request a free quote for book writing, editing, publishing & marketing services. Call +1 (850) 338-6681 or fill out our contact form.",
+  keywords: [
+    "contact authors publishing hub",
+    "book publishing quote",
+    "free publishing estimate",
+    "book publishing inquiry",
+    "hire book publisher",
+  ],
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Us — Authors Publishing Hub",
+    description: "Start your publishing journey today. Get a free, customized price estimate.",
+    url: "https://authorspublishinghub.com/contact",
+  },
 };
 
 export default function ContactPage() {

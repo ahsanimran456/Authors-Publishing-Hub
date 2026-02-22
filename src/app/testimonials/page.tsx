@@ -4,9 +4,22 @@ import { Star, Quote } from "lucide-react";
 import OurClients from "@/components/OurClients";
 
 export const metadata: Metadata = {
-  title: "Testimonials — Authors Publishing Hub",
+  title: "Testimonials",
   description:
-    "Hear from our satisfied authors. Read real testimonials from clients who trusted us with their publishing journey.",
+    "Read real testimonials from satisfied authors who trusted Authors Publishing Hub with their publishing journey. 5-star reviews from fiction, non-fiction, and self-help authors across the USA.",
+  keywords: [
+    "book publishing reviews",
+    "authors publishing hub testimonials",
+    "publishing service reviews",
+    "client success stories",
+    "book publishing feedback",
+  ],
+  alternates: { canonical: "/testimonials" },
+  openGraph: {
+    title: "Client Testimonials — Authors Publishing Hub",
+    description: "Hear from authors who achieved their publishing dreams with us. Real stories, real results.",
+    url: "https://authorspublishinghub.com/testimonials",
+  },
 };
 
 const testimonials = [

@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Authors Publishing Hub",
+  title: "Privacy Policy",
   description:
     "Read our privacy policy to understand how Authors Publishing Hub collects, uses, and protects your personal information.",
+  alternates: { canonical: "/privacy-policy" },
+  robots: { index: false, follow: true },
 };
 
 export default function PrivacyPolicyPage() {

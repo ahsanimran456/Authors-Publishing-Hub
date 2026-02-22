@@ -5,9 +5,16 @@ import CTABannerCards from "@/components/CTABannerCards";
 import FreeEstimateCTA from "@/components/FreeEstimateCTA";
 
 export const metadata: Metadata = {
-  title: "About Us — Authors Publishing Hub",
+  title: "About Us",
   description:
-    "Learn about Authors Publishing Hub — our mission, values, and the passionate team behind your publishing success.",
+    "Learn about Authors Publishing Hub — a passionate team of publishing professionals dedicated to transforming your writing dreams into bestselling reality. Trusted by 1000+ authors nationwide.",
+  keywords: ["about authors publishing hub", "book publishing company", "publishing team USA", "our story"],
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Us — Authors Publishing Hub",
+    description: "Meet the passionate team behind your publishing success. From manuscript to marketplace.",
+    url: "https://authorspublishinghub.com/about",
+  },
 };
 
 export default function AboutPage() {

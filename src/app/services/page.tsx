@@ -13,9 +13,25 @@ import CTABannerCards from "@/components/CTABannerCards";
 import FreeEstimateCTA from "@/components/FreeEstimateCTA";
 
 export const metadata: Metadata = {
-  title: "Services — Authors Publishing Hub",
+  title: "Our Services",
   description:
-    "Explore our comprehensive publishing services — from professional writing and editing to publishing and book marketing.",
+    "Comprehensive book publishing services — professional book writing, expert editing & proofreading, full-service publishing, and strategic book marketing. Affordable packages for authors in the USA.",
+  keywords: [
+    "book writing services",
+    "book editing services USA",
+    "book publishing services",
+    "book marketing strategies",
+    "ghostwriting services",
+    "manuscript editing",
+    "affordable book publishing",
+    "professional book editors",
+  ],
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Our Services — Authors Publishing Hub",
+    description: "From book writing to marketing — comprehensive publishing solutions tailored to your needs.",
+    url: "https://authorspublishinghub.com/services",
+  },
 };
 
 export default function ServicesPage() {

@@ -6,9 +6,22 @@ import PortfolioSection from "@/components/PortfolioSection";
 import FreeEstimateCTA from "@/components/FreeEstimateCTA";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Authors Publishing Hub",
+  title: "Portfolio",
   description:
-    "Browse our portfolio of published books. See the quality of work we deliver for authors worldwide.",
+    "Browse our portfolio of 100+ published books on Amazon. See the quality covers, formatting, and publishing work we deliver for authors worldwide. Your book could be next!",
+  keywords: [
+    "published books portfolio",
+    "book publishing examples",
+    "published authors",
+    "Amazon published books",
+    "book cover design portfolio",
+  ],
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    title: "Our Portfolio — Authors Publishing Hub",
+    description: "100+ books published on Amazon. Browse our portfolio of successfully published authors.",
+    url: "https://authorspublishinghub.com/portfolio",
+  },
 };
 
 export default function PortfolioPage() {
