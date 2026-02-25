@@ -3,31 +3,31 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    role: "Fiction Author",
+    name: "Angela Prescott",
+    role: "Memoir Author",
     quote:
-      "Authors Publishing Hub transformed my manuscript into a bestseller. Their editing team is phenomenal and the cover design exceeded all my expectations!",
+      "They turned my life story into something truly special. The team was patient, thoughtful, and incredibly skilled. I couldn't have done this without them.",
     rating: 5,
-    image: "/images/person1.jpg",
-    book: "/images/books/abandoned.jpg",
+    image: "/images/person11.jpg",
+    book: "/images/books/life.jpg",
   },
   {
-    name: "James Rodriguez",
-    role: "Non-Fiction Writer",
+    name: "Marcus Delgado",
+    role: "Business Author",
     quote:
-      "From cover design to marketing, every step was handled with incredible professionalism. I couldn't have asked for a better publishing partner.",
+      "From the first consultation to holding the finished book, every step felt professional and seamless. My business book now sits proudly on Amazon's shelves.",
     rating: 5,
-    image: "/images/person2.jpg",
-    book: "/images/books/ai.jpg",
+    image: "/images/person12.jpg",
+    book: "/images/books/selling.jpg",
   },
   {
-    name: "Emily Chen",
-    role: "Children's Book Author",
+    name: "Naomi Ashworth",
+    role: "Poetry Author",
     quote:
-      "The team understood my vision perfectly. My book looks absolutely stunning and the sales have been incredible since launch day.",
+      "Publishing poetry can feel risky, but this team made it feel safe and exciting. The final design was beyond anything I imagined. Truly a beautiful collaboration.",
     rating: 5,
-    image: "/images/person3.jpg",
-    book: "/images/books/awake.jpg",
+    image: "/images/person13.jpg",
+    book: "/images/books/emot.jpg",
   },
 ];
 

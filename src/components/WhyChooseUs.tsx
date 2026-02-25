@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Phone, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const features = [
   "Professional Look & Feel",
@@ -42,20 +41,6 @@ export default function WhyChooseUs() {
               ))}
             </div>
 
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
-              <Link
-                href="/contact"
-                className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
-              >
-                Get A Free Quote <ArrowRight size={15} />
-              </Link>
-              <a
-                href="tel:+18503386681"
-                className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
-              >
-                <Phone size={18} /> +1 (850) 338-6681
-              </a>
-            </div>
           </div>
 
           <div className="relative flex items-center justify-center mt-6 lg:mt-0">

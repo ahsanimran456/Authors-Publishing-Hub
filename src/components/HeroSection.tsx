@@ -13,8 +13,8 @@ export default function HeroSection() {
         priority
         quality={90}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/85 via-navy/78 to-purple-dark/70" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/65 via-transparent to-navy/45" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/93 via-navy/88 to-purple-dark/83" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/83 via-black/48 to-navy/65" />
       <div className="absolute inset-0 line-pattern opacity-40" />
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-48 sm:w-80 h-48 sm:h-80 bg-gold rounded-full blur-[100px]" />
@@ -63,7 +63,7 @@ export default function HeroSection() {
 
           <div className="hidden lg:flex items-center justify-center animate-fade-in-up animate-delay-400">
             <Image
-              src="/images/book-wrap.png"
+              src="/images/herosection.png"
               alt="Published Books"
               width={550}
               height={450}

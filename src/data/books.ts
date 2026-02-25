@@ -6,7 +6,7 @@ export interface Book {
 }
 
 export const books: Book[] = [
-  { image: "/images/books/coach.jpg", title: "Coach To Align", author: "Shaine Hobdy", link: "https://www.amazon.com/Coach-ALIGN-Building-Empowered-Together/dp/B0G2CY36WV" },
+  { image: "/images/books/91a900217006799.67b72f52f047bb.jpg.jpeg", title: "Indigo", author: "Ryan Michael", link: "#" },
   { image: "/images/books/rightsss.jpg", title: "Sun Of Righteousness", author: "Eddie Cross", link: "https://www.amazon.com/SUN-RIGHTEOUSNESS-Breaks-Through-Shadows/dp/B0G4FLHWV8" },
   { image: "/images/books/gv.jpg", title: "Hearing GOD'S Voice", author: "Arthur Benjemin D", link: "https://www.amazon.com/HEARING-GODs-VOICE-DISCERNING-GODS/dp/B0G2HW1GD6" },
   { image: "/images/books/las.jpg", title: "LAS TERRIBLES CONSECUENCIAS DEL PECADO", author: "Rocky Arias Santos", link: "https://www.amazon.com/LAS-TERRIBLES-CONSECUENCIAS-DEL-PECADO/dp/B0G342ZKGQ" },
@@ -153,9 +153,7 @@ export const books: Book[] = [
   { image: "/images/books/artspain.jpg", title: "Art of Spain", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/chineseart.jpg", title: "Chinese Art", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/elsp.jpg", title: "El Espíritu", author: "Authors Publishing Hub", link: "#" },
-  { image: "/images/books/frenchart.jpg", title: "French Art", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/h2.jpg", title: "H2", author: "Authors Publishing Hub", link: "#" },
-  { image: "/images/books/hindi.jpg", title: "Hindi", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/proto.jpg", title: "Proto", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/theresm.jpg", title: "There's More", author: "Authors Publishing Hub", link: "#" },
 ];

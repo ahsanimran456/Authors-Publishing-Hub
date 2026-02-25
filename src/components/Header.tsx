@@ -26,21 +26,17 @@ export default function Header() {
 
   return (
     <>
-      <div className="bg-navy-dark text-white/80 text-xs sm:text-sm py-2 hidden md:block">
+      <div className="bg-navy-dark text-white text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <p className="truncate">Empowering Authors Worldwide — Professional Publishing Services</p>
-          <div className="flex items-center gap-3 lg:gap-4 shrink-0">
+          <p className="truncate hidden md:block">Empowering Authors Worldwide — Professional Publishing Services</p>
+          <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 w-full md:w-auto justify-between md:justify-end">
             <a href="tel:+18503386681" className="flex items-center gap-1.5 hover:text-gold transition-colors">
               <Phone size={13} />
-              <span className="hidden lg:inline">+1 (850) 338-6681</span>
-              <span className="lg:hidden">Call Us</span>
+              +1 (850) 338-6681
             </a>
             <span className="text-white/30">|</span>
-            <a href="mailto:Hello@authorspublishinghub.com" className="hover:text-gold transition-colors hidden lg:inline">
-              Hello@authorspublishinghub.com
-            </a>
-            <a href="mailto:Hello@authorspublishinghub.com" className="hover:text-gold transition-colors lg:hidden">
-              Email Us
+            <a href="mailto:contact@authorpublishinghub.com" className="hover:text-gold transition-colors">
+              contact@authorpublishinghub.com
             </a>
           </div>
         </div>
@@ -54,17 +50,17 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-18">
+          <div className="flex items-center justify-between h-14 sm:h-15 lg:h-18">
             <Link href="/" className="flex items-center shrink-0">
-              <div className="relative h-12 sm:h-13 lg:h-14 w-[170px] sm:w-[195px] lg:w-[220px]">
-                <Image
-                  src="/logo.png"
-                  alt="Authors Publishing Hub"
-                  fill
-                  className="object-contain object-left"
-                  priority
-                />
-              </div>
+              <Image
+                src="/weblogo.png"
+                alt="Authors Publishing Hub"
+                width={115}
+                height={90}
+                className="w-[80px] sm:w-[100px] md:w-[115px] lg:w-[125px] h-auto"
+                priority
+                unoptimized
+              />
             </Link>
 
             <nav className="hidden xl:flex items-center gap-5 2xl:gap-7">

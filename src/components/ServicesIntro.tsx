@@ -30,25 +30,18 @@ export default function ServicesIntro() {
               >
                 View All Services <ArrowRight size={15} />
               </Link>
-              <Link
-                href="/contact"
-                className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
-              >
-                Get A Free Quote <ArrowRight size={15} />
-              </Link>
             </div>
           </div>
 
           <div className="flex items-center justify-center mt-6 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-md lg:max-w-none">
+            <div className="relative rounded-2xl overflow-hidden w-full max-w-md lg:max-w-none">
               <Image
-                src="/images/publishing-books.png"
+                src="/images/publishing-book.png"
                 alt="Book Publishing Services"
                 width={550}
                 height={450}
                 className="object-cover rounded-2xl w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent rounded-2xl" />
             </div>
           </div>
         </div>

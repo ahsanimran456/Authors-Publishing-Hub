@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export default function FreeEstimateCTA() {
   return (
@@ -19,12 +19,6 @@ export default function FreeEstimateCTA() {
           >
             Get Started
           </Link>
-          <a
-            href="#"
-            className="bg-navy hover:bg-navy-light text-white font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 shadow-lg hover:shadow-navy/20 hover:-translate-y-0.5 w-full sm:w-auto justify-center"
-          >
-            <MessageCircle size={15} /> Live Chat
-          </a>
           <a
             href="tel:+18503386681"
             className="border border-navy hover:border-purple text-navy hover:text-purple font-medium px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5 w-full sm:w-auto justify-center"

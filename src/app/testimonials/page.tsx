@@ -24,91 +24,91 @@ export const metadata: Metadata = {
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
+    name: "Lorraine Whitfield",
     role: "Fiction Author",
     quote:
-      "Authors Publishing Hub transformed my manuscript into a bestseller. Their editing team is phenomenal and the cover design exceeded all my expectations! I couldn't be happier with the final result.",
+      "I handed over a rough draft and got back a polished, professional book. The editing was sharp, the cover stunning, and the whole process felt effortless on my end. I couldn't be happier with the final result.",
     rating: 5,
     image: "/images/person1.jpg",
     book: "/images/books/abandoned.jpg",
   },
   {
-    name: "James Rodriguez",
+    name: "Derek Nwosu",
     role: "Non-Fiction Writer",
     quote:
-      "From cover design to marketing, every step was handled with incredible professionalism. I couldn't have asked for a better publishing partner. They truly care about their authors.",
+      "What impressed me most was the communication. Every question I had was answered within hours. The final product speaks for itself — it looks incredible on the shelf. They truly care about their authors.",
     rating: 5,
     image: "/images/person2.jpg",
     book: "/images/books/ai.jpg",
   },
   {
-    name: "Emily Chen",
+    name: "Priya Samuels",
     role: "Children's Book Author",
     quote:
-      "The team understood my vision perfectly. My book looks absolutely stunning and the sales have been incredible since launch day. Their attention to detail is unmatched in the industry.",
+      "They nailed the illustrations and layout for my children's book. My readers love the quality, and I've already recommended them to three other authors. Their attention to detail is unmatched.",
     rating: 5,
     image: "/images/person3.jpg",
     book: "/images/books/awake.jpg",
   },
   {
-    name: "Michael Thompson",
+    name: "Carlton Reeves",
     role: "Self-Help Author",
     quote:
-      "I was skeptical at first, but Authors Publishing Hub exceeded every expectation I had. They guided me through the entire process with patience and expertise. My book is now on Amazon's bestseller list!",
+      "I came in with zero publishing knowledge and left with a book on Amazon that I'm genuinely proud of. The team walked me through formatting, pricing, and distribution like seasoned pros.",
     rating: 5,
     image: "/images/person4.jpg",
-    book: "/images/books/coach.jpg",
+    book: "/images/books/change.jpg",
   },
   {
-    name: "Jessica Palmer",
+    name: "Monique Tran",
     role: "Romance Novelist",
     quote:
-      "Working with this team was an absolute dream. They handled everything from editing to marketing, and my book launch was a massive success. I've already signed up for my second book with them!",
+      "My romance novel needed a cover that matched the emotion inside. They delivered something breathtaking. The marketing push after launch brought in readers I never expected to reach.",
     rating: 5,
     image: "/images/person5.jpg",
     book: "/images/books/forbidden.jpg",
   },
   {
-    name: "David Martinez",
+    name: "Rashid Kelley",
     role: "Memoir Author",
     quote:
-      "The quality of their editing service is world-class. They polished my memoir while keeping my authentic voice intact. The cover design was breathtaking and perfectly captured my story's essence.",
+      "Writing a memoir is deeply personal, and I needed editors who understood that. They preserved my voice while making the prose tighter and more compelling. The result brought tears to my family.",
     rating: 5,
     image: "/images/person6.jpg",
-    book: "/images/books/change.jpg",
+    book: "/images/books/life.jpg",
   },
   {
-    name: "Amanda Foster",
+    name: "Vivian Okafor",
     role: "Poetry Author",
     quote:
-      "I never thought publishing a poetry collection could be so seamless. The team's creativity and dedication brought my words to life in ways I never imagined. Truly grateful for their support.",
+      "Publishing poetry felt intimidating until I worked with this team. They treated every line with respect and designed a book that feels like a piece of art. I'm beyond grateful.",
     rating: 5,
     image: "/images/person7.jpg",
     book: "/images/books/emot.jpg",
   },
   {
-    name: "Robert Williams",
+    name: "Grant Holloway",
     role: "Business Author",
     quote:
-      "As a first-time author, I had no idea where to start. Authors Publishing Hub held my hand through every step. Their marketing strategies alone tripled my expected sales in the first month.",
+      "As someone in the corporate world, I needed a book that looked credible and professional. They delivered on every front — from interior formatting to a cover that commands attention.",
     rating: 5,
     image: "/images/person8.jpg",
     book: "/images/books/selling.jpg",
   },
   {
-    name: "Natalie Brooks",
+    name: "Camille Fournier",
     role: "Historical Fiction Writer",
     quote:
-      "The research support and editorial feedback I received were invaluable. My historical novel required meticulous attention to detail, and the team delivered flawlessly. A truly professional experience.",
+      "My historical novel required meticulous research accuracy and period-appropriate language. The editorial team went above and beyond to ensure authenticity. A truly world-class experience.",
     rating: 5,
     image: "/images/person9.jpg",
     book: "/images/books/equi.jpg",
   },
   {
-    name: "Christopher Hayes",
+    name: "Terrence Blackwood",
     role: "Thriller Author",
     quote:
-      "From manuscript to bookshelf in record time without compromising quality. The team's efficiency and professionalism are unparalleled. My thriller is now available in 30+ countries thanks to their distribution network.",
+      "Speed without sacrificing quality — that's what I got. My thriller went from final manuscript to Amazon in weeks, and it's now available in over 30 countries. Absolutely phenomenal service.",
     rating: 5,
     image: "/images/person10.jpg",
     book: "/images/books/shadow.jpg",
@@ -127,8 +127,8 @@ export default function TestimonialsPage() {
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/80 to-purple-dark/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/93 via-navy/88 to-purple-dark/83" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/83 via-black/48 to-navy/65" />
         <div className="absolute inset-0 line-pattern opacity-30" />
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-10 sm:right-20 w-48 sm:w-72 h-48 sm:h-72 bg-gold rounded-full blur-[100px]" />

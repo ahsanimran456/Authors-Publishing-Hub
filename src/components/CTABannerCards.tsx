@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+
 const cards = [
   {
     icon: PenTool,
@@ -49,14 +50,6 @@ export default function CTABannerCards() {
               Hop on a call and learn how we can help you access the full
               potential of your book.
             </p>
-          </div>
-          <div className="flex flex-row items-center gap-4 shrink-0">
-            <Link
-              href="/contact"
-              className="btn-shimmer bg-gold hover:bg-gold-light text-navy-dark font-semibold px-6 py-2.5 rounded-full text-sm tracking-wide transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-gold/25 hover:-translate-y-0.5"
-            >
-              Get Started <ArrowRight size={15} />
-            </Link>
           </div>
         </div>
 

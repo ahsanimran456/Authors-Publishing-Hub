@@ -28,14 +28,14 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="relative h-13 sm:h-14 w-[185px] sm:w-[210px] mb-4">
-              <Image
-                src="/logo.png"
-                alt="Authors Publishing Hub"
-                fill
-                className="object-contain object-left"
-              />
-            </div>
+            <Image
+              src="/weblogo.png"
+              alt="Authors Publishing Hub"
+              width={115}
+              height={90}
+              className="w-[115px] sm:w-[115px] md:w-[115px] lg:w-[125px] h-auto mb-4"
+              unoptimized
+            />
             <p className="text-white/75 leading-relaxed mt-4 text-base sm:text-lg">
               Empowering authors worldwide to bring their stories to life with
               professional publishing services. From manuscript to marketplace,
@@ -90,13 +90,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 sm:space-y-4">
               <li>
-                <a href="mailto:Hello@authorspublishinghub.com" className="flex items-start gap-3 group">
+                <a href="mailto:contact@authorpublishinghub.com" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-white/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-gold/20 transition-colors">
                     <Mail size={14} className="text-gold" />
                   </div>
                   <div>
                     <div className="text-white/90 font-medium text-base sm:text-lg">Email</div>
-                    <span className="text-white/70 text-sm sm:text-base group-hover:text-gold transition-colors break-all">Hello@authorspublishinghub.com</span>
+                    <span className="text-white/70 text-sm sm:text-base group-hover:text-gold transition-colors break-all">contact@authorpublishinghub.com</span>
                   </div>
                 </a>
               </li>
@@ -116,10 +116,8 @@ export default function Footer() {
                   <MapPin size={14} className="text-gold" />
                 </div>
                 <div>
-                  <div className="text-white/90 font-medium text-base sm:text-lg">Locations</div>
-                  <span className="text-white/70 text-xs sm:text-sm leading-relaxed block">6th Floor Suite #603-PMB 353 Lexington Avenue, New York, NY, United States</span>
-                  <span className="text-white/70 text-xs sm:text-sm leading-relaxed block mt-1.5">5475 Mark Dabling Blvd #210, Colorado Springs, CO 80918, United States</span>
-                  <span className="text-white/70 text-xs sm:text-sm leading-relaxed block mt-1.5">18215 Corktree Dr San Bernardino CA 92407</span>
+                  <div className="text-white/90 font-medium text-base sm:text-lg">Location</div>
+                  <span className="text-white/70 text-xs sm:text-sm leading-relaxed block">440 Louisiana St, Houston, TX 77002</span>
                 </div>
               </li>
             </ul>

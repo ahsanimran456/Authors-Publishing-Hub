@@ -21,8 +21,8 @@ export default function TermsOfServicePage() {
           priority
           quality={90}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/90 via-navy/80 to-purple-dark/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/93 via-navy/88 to-purple-dark/83" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-dark/83 via-black/48 to-navy/65" />
         <div className="absolute inset-0 line-pattern opacity-30" />
 
         <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
@@ -107,9 +107,9 @@ export default function TermsOfServicePage() {
             If you have any questions about these Terms of Service, please contact us at:
           </p>
           <ul className="list-none pl-0 text-gray-600 space-y-1 mb-4 text-sm sm:text-base">
-            <li><strong>Email:</strong> Hello@authorspublishinghub.com</li>
+            <li><strong>Email:</strong> contact@authorpublishinghub.com</li>
             <li><strong>Phone:</strong> +1 (850) 338-6681</li>
-            <li><strong>Address:</strong> 6th Floor Suite #603-PMB 353 Lexington Avenue, New York, NY, United States</li>
+            <li><strong>Address:</strong> 440 Louisiana St, Houston, TX 77002</li>
           </ul>
         </div>
       </section>
