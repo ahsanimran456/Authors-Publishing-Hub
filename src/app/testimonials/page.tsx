@@ -65,7 +65,7 @@ const testimonials = [
     quote:
       "Life is Random is my personal memoir, and I needed a publisher who would treat my story with care and authenticity. The team at Authors Publishing Hub did exactly that — from meticulous editing to a clean, professional layout. Seeing my journey in print has been incredibly rewarding.",
     rating: 5,
-    image: "/images/person11.jpg",
+    image: "/images/authors/anil-jain-fronteras-tic.jpg.jpeg",
     book: "/images/books/life.jpg",
   },
   {
