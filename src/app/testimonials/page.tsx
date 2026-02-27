@@ -92,7 +92,7 @@ const testimonials = [
     quote:
       "Writing fantasy fiction requires a publisher who appreciates world-building and storytelling. The Equinox Tor came to life with a stunning cover and polished manuscript. Their attention to detail in both editing and design exceeded all my expectations.",
     rating: 5,
-    image: "/images/authors/David%20Doersch.jfif",
+    image: "/images/authors/David%20Doersch.jpg",
     book: "/images/books/equi.jpg",
   },
 ];
