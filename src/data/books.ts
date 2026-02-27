@@ -114,6 +114,7 @@ export const books: Book[] = [
   { image: "/images/books/24k.jpg", title: "CubeTM Paradigm Shift", author: "Miles Jonathan Austin Jr", link: "https://www.amazon.com/CubeTM-Paradigm-Shift-Global-Currency-ebook/dp/B0FWCWQ5SL" },
   { image: "/images/books/neworld.webp", title: "New World", author: "Nathan Llera", link: "https://www.amazon.com/New-World-Nathan-Llera-ebook/dp/B0FJQN8C6F" },
   { image: "/images/books/nugget.webp", title: "CHICKEN NUGGET GIRL", author: "Kate Torode", link: "https://www.amazon.com/CHICKEN-NUGGET-GIRL-Kate-torode-ebook/dp/B0FM8QZRR1" },
+  { image: "/images/books/kent-cure.jpg", title: "The Cure", author: "Kent Peters", link: "https://www.amazon.com/Cure-Ken-Peters/dp/1098351843" },
   { image: "/images/books/abandoned.jpg", title: "Abandoned No More", author: "Ken Reiman", link: "https://www.amazon.com/Abandoned-No-More-Ambassador-Christ-ebook/dp/B0FWPF15G3" },
   { image: "/images/books/eom.jpg", title: "End Male Beginning Man", author: "Vitali Stepanov", link: "https://www.amazon.com/End-Male-Beginning-Man-ebook/dp/B0FSTGPDD3" },
   { image: "/images/books/chrono.jpg", title: "Chronicles Civil Process Servers", author: "Christopher J. Williams", link: "https://www.amazon.com/Chronicles-Civil-Process-Servers-Professionally-ebook/dp/B0FHC3QCL9" },
@@ -155,5 +156,4 @@ export const books: Book[] = [
   { image: "/images/books/elsp.jpg", title: "El Espíritu", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/h2.jpg", title: "H2", author: "Authors Publishing Hub", link: "#" },
   { image: "/images/books/proto.jpg", title: "Proto", author: "Authors Publishing Hub", link: "#" },
-  { image: "/images/books/theresm.jpg", title: "There's More", author: "Authors Publishing Hub", link: "#" },
 ];

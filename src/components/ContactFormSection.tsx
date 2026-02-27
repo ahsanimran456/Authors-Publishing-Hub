@@ -29,6 +29,7 @@ export default function ContactFormSection() {
       if (res.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", phone: "", message: "" });
+        alert("Thank you! Your message has been sent successfully. We'll get back to you soon.");
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         const data = await res.json();
@@ -122,7 +123,7 @@ export default function ContactFormSection() {
 
           <div className="hidden lg:flex items-center justify-center">
             <Image
-              src="/images/great-writer.png"
+              src="/images/great-writerform.png"
               alt="Every Great Writer Starts Somewhere"
               width={500}
               height={500}

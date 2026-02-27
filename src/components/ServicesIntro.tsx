@@ -34,13 +34,13 @@ export default function ServicesIntro() {
           </div>
 
           <div className="flex items-center justify-center mt-6 lg:mt-0">
-            <div className="relative rounded-2xl overflow-hidden w-full max-w-md lg:max-w-none">
+            <div className="relative w-full max-w-md lg:max-w-none drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
               <Image
                 src="/images/publishing-book.png"
                 alt="Book Publishing Services"
                 width={550}
                 height={450}
-                className="object-cover rounded-2xl w-full"
+                className="object-cover w-full"
               />
             </div>
           </div>

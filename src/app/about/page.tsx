@@ -95,7 +95,7 @@ export default function AboutPage() {
 
             <div className="relative mt-6 lg:mt-0">
               <Image
-                src="/images/about.jpg"
+                src="/images/upscale17720501058323.png"
                 alt="About Authors Publishing Hub"
                 width={600}
                 height={500}

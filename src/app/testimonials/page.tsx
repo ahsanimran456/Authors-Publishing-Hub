@@ -24,94 +24,76 @@ export const metadata: Metadata = {
 
 const testimonials = [
   {
-    name: "Lorraine Whitfield",
-    role: "Fiction Author",
+    name: "Ken Reiman",
+    role: "Non-Fiction Author",
     quote:
-      "I handed over a rough draft and got back a polished, professional book. The editing was sharp, the cover stunning, and the whole process felt effortless on my end. I couldn't be happier with the final result.",
+      "From the very first conversation, I knew my book was in the right hands. The team guided me through every stage — editing, formatting, cover design — with real professionalism. Abandoned No More turned out exactly as I envisioned, and seeing it on Amazon was a dream come true.",
     rating: 5,
-    image: "/images/person1.jpg",
+    image: "/images/authors/Ken%20Reiman.png",
     book: "/images/books/abandoned.jpg",
   },
   {
-    name: "Derek Nwosu",
-    role: "Non-Fiction Writer",
+    name: "Kent Peters",
+    role: "Fiction Author",
     quote:
-      "What impressed me most was the communication. Every question I had was answered within hours. The final product speaks for itself — it looks incredible on the shelf. They truly care about their authors.",
+      "The Cure was a deeply personal project that required a publisher who understood the nuances of biological thriller fiction. The team brought my vision to life with sharp editing, a captivating cover, and seamless distribution. I'm proud to see it resonate with readers worldwide.",
     rating: 5,
-    image: "/images/person2.jpg",
+    image: "/images/authors/Kent%20Peters.jpg",
+    book: "/images/books/kent-cure.jpg",
+  },
+  {
+    name: "Dr. Cedric B. Howard",
+    role: "Non-Fiction Author",
+    quote:
+      "Publishing a book on mindfulness and AI required a team that understood both precision and creativity. They delivered on every front — the editing was sharp, the layout was clean, and the cover perfectly captures the essence of the book. Highly recommend their services.",
+    rating: 5,
+    image: "/images/authors/Dr%20Cedric%20B.%20Howard.jpg",
     book: "/images/books/ai.jpg",
   },
   {
-    name: "Priya Samuels",
-    role: "Children's Book Author",
-    quote:
-      "They nailed the illustrations and layout for my children's book. My readers love the quality, and I've already recommended them to three other authors. Their attention to detail is unmatched.",
-    rating: 5,
-    image: "/images/person3.jpg",
-    book: "/images/books/awake.jpg",
-  },
-  {
-    name: "Carlton Reeves",
+    name: "Michael A. Knight",
     role: "Self-Help Author",
     quote:
-      "I came in with zero publishing knowledge and left with a book on Amazon that I'm genuinely proud of. The team walked me through formatting, pricing, and distribution like seasoned pros.",
+      "I came in with a powerful message and they helped me present it in the most compelling way possible. Change or Die is more than a book — it's a movement. The team understood my vision and brought it to life with exceptional quality and care.",
     rating: 5,
-    image: "/images/person4.jpg",
+    image: "/images/authors/Michael%20A.%20Knight.webp",
     book: "/images/books/change.jpg",
   },
   {
-    name: "Monique Tran",
-    role: "Romance Novelist",
+    name: "Anil Jain",
+    role: "Non-Fiction Author",
     quote:
-      "My romance novel needed a cover that matched the emotion inside. They delivered something breathtaking. The marketing push after launch brought in readers I never expected to reach.",
+      "Life is Random is my personal memoir, and I needed a publisher who would treat my story with care and authenticity. The team at Authors Publishing Hub did exactly that — from meticulous editing to a clean, professional layout. Seeing my journey in print has been incredibly rewarding.",
     rating: 5,
-    image: "/images/person5.jpg",
-    book: "/images/books/forbidden.jpg",
-  },
-  {
-    name: "Rashid Kelley",
-    role: "Memoir Author",
-    quote:
-      "Writing a memoir is deeply personal, and I needed editors who understood that. They preserved my voice while making the prose tighter and more compelling. The result brought tears to my family.",
-    rating: 5,
-    image: "/images/person6.jpg",
+    image: "/images/person11.jpg",
     book: "/images/books/life.jpg",
   },
   {
-    name: "Vivian Okafor",
-    role: "Poetry Author",
+    name: "Ashley Dawson",
+    role: "Fiction Romance Author",
     quote:
-      "Publishing poetry felt intimidating until I worked with this team. They treated every line with respect and designed a book that feels like a piece of art. I'm beyond grateful.",
+      "As a romance author, the cover and the emotional tone of the book matter deeply. They designed a cover for Forbidden that stops readers in their tracks, and the interior formatting is flawless. The whole experience was smooth and stress-free.",
     rating: 5,
-    image: "/images/person7.jpg",
-    book: "/images/books/emot.jpg",
+    image: "/images/authors/Ashley%20Dawson.webp",
+    book: "/images/books/forbidden.jpg",
   },
   {
-    name: "Grant Holloway",
-    role: "Business Author",
+    name: "Rick Cochran",
+    role: "Non-Fiction Author",
     quote:
-      "As someone in the corporate world, I needed a book that looked credible and professional. They delivered on every front — from interior formatting to a cover that commands attention.",
+      "Selling with Intent needed to look as professional as the strategies inside it. The team nailed everything — from the bold cover design to the meticulous interior layout. They treated my book like their own, and the results speak for themselves.",
     rating: 5,
-    image: "/images/person8.jpg",
+    image: "/images/authors/Rick%20Cochran.webp",
     book: "/images/books/selling.jpg",
   },
   {
-    name: "Camille Fournier",
-    role: "Historical Fiction Writer",
+    name: "David Doersch",
+    role: "Fantasy Fiction Author",
     quote:
-      "My historical novel required meticulous research accuracy and period-appropriate language. The editorial team went above and beyond to ensure authenticity. A truly world-class experience.",
+      "Writing fantasy fiction requires a publisher who appreciates world-building and storytelling. The Equinox Tor came to life with a stunning cover and polished manuscript. Their attention to detail in both editing and design exceeded all my expectations.",
     rating: 5,
-    image: "/images/person9.jpg",
+    image: "/images/authors/David%20Doersch.jfif",
     book: "/images/books/equi.jpg",
-  },
-  {
-    name: "Terrence Blackwood",
-    role: "Thriller Author",
-    quote:
-      "Speed without sacrificing quality — that's what I got. My thriller went from final manuscript to Amazon in weeks, and it's now available in over 30 countries. Absolutely phenomenal service.",
-    rating: 5,
-    image: "/images/person10.jpg",
-    book: "/images/books/shadow.jpg",
   },
 ];
 
@@ -172,28 +154,27 @@ export default function TestimonialsPage() {
                 className="bg-white rounded-2xl overflow-hidden group hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-purple/5"
               >
                 <div className="flex flex-col sm:flex-row">
-                  <div className="sm:w-36 lg:w-40 shrink-0 relative">
-                    <div className="h-40 sm:h-full relative overflow-hidden">
-                      <Image
-                        src={testimonial.book}
-                        alt="Published Book"
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-b sm:bg-gradient-to-r from-transparent to-navy/10" />
-                    </div>
+                  <div className="sm:w-36 lg:w-40 shrink-0 bg-gradient-to-br from-purple/5 to-navy/5 flex items-center justify-center p-3">
+                    <Image
+                      src={testimonial.book}
+                      alt="Published Book"
+                      width={150}
+                      height={220}
+                      className="object-contain w-full h-auto rounded-md shadow-md"
+                    />
                   </div>
 
                   <div className="flex-1 p-4 sm:p-6 lg:p-7">
                     <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <div className="flex items-center gap-2.5 sm:gap-3">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          width={50}
-                          height={50}
-                          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-gold"
-                        />
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-gold shrink-0 relative">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
                         <div>
                           <h3 className="font-bold text-navy text-sm sm:text-base">
                             {testimonial.name}
