@@ -9,11 +9,16 @@ interface PortfolioSectionProps {
   showAll?: boolean;
 }
 
-const BOOKS_PER_PAGE = 18;
+const BOOKS_PER_PAGE = 20;
 
 function BookCard({ book }: { book: (typeof books)[0] }) {
   return (
-    <div className="group relative rounded-lg sm:rounded-xl overflow-hidden bg-white/5 aspect-[2/3]">
+    <a
+      href={book.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative rounded-lg sm:rounded-xl overflow-hidden bg-white/5 aspect-[2/3] block"
+    >
       <Image
         src={book.image}
         alt={book.title}
@@ -27,7 +32,7 @@ function BookCard({ book }: { book: (typeof books)[0] }) {
         </p>
         <p className="text-gold text-[9px] sm:text-[11px] mt-0.5">{book.author}</p>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -56,7 +61,7 @@ function PortfolioGrid() {
       <div className="overflow-hidden">
         <div
           ref={containerRef}
-          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5 transition-all duration-300 ease-in-out ${
+          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5 transition-all duration-300 ease-in-out ${
             sliding
               ? direction === "right"
                 ? "-translate-x-full opacity-0"
@@ -115,11 +120,7 @@ export default function PortfolioSection({ showAll = false }: PortfolioSectionPr
     return (
       <section className="py-10 sm:py-14 lg:py-16 bg-cream dot-pattern relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
-            {books.map((book, i) => (
-              <BookCard key={i} book={book} />
-            ))}
-          </div>
+          <PortfolioGrid />
         </div>
       </section>
     );
