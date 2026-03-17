@@ -3,31 +3,31 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Angela Prescott",
-    role: "Memoir Author",
+    name: "Anil Jain",
+    role: "Non-Fiction Author",
     quote:
-      "They turned my life story into something truly special. The team was patient, thoughtful, and incredibly skilled. I couldn't have done this without them.",
+      "Life is Random is my personal memoir, and I needed a publisher who would treat my story with care and authenticity. The team at Authors Publishing Hub did exactly that — from meticulous editing to a clean, professional layout. Seeing my journey in print has been incredibly rewarding.",
     rating: 5,
-    image: "/images/person11.jpg",
+    image: "/images/authors/anil-jain-fronteras-tic.jpg.jpeg",
     book: "/images/books/life.jpg",
   },
   {
-    name: "Marcus Delgado",
-    role: "Business Author",
+    name: "Rick Cochran",
+    role: "Non-Fiction Author",
     quote:
-      "From the first consultation to holding the finished book, every step felt professional and seamless. My business book now sits proudly on Amazon's shelves.",
+      "Selling with Intent needed to look as professional as the strategies inside it. The team nailed everything — from the bold cover design to the meticulous interior layout. They treated my book like their own, and the results speak for themselves.",
     rating: 5,
-    image: "/images/person12.jpg",
+    image: "/images/authors/Rick%20Cochran.webp",
     book: "/images/books/selling.jpg",
   },
   {
-    name: "Naomi Ashworth",
-    role: "Poetry Author",
+    name: "David Doersch",
+    role: "Fantasy Fiction Author",
     quote:
-      "Publishing poetry can feel risky, but this team made it feel safe and exciting. The final design was beyond anything I imagined. Truly a beautiful collaboration.",
+      "Writing fantasy fiction requires a publisher who appreciates world-building and storytelling. The Equinox Tor came to life with a stunning cover and polished manuscript. Their attention to detail in both editing and design exceeded all my expectations.",
     rating: 5,
-    image: "/images/person13.jpg",
-    book: "/images/books/emot.jpg",
+    image: "/images/authors/David%20Doersch.jpg",
+    book: "/images/books/equi.jpg",
   },
 ];
 
@@ -59,13 +59,12 @@ export default function TestimonialsSection() {
               />
 
               <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
-                <div className="relative shrink-0">
+                <div className="relative shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-gold">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
-                    width={70}
-                    height={70}
-                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-gold"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div>
